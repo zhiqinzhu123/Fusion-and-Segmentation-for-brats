@@ -1,14 +1,14 @@
-### Brain Tumor Segmentation Based on the Fusion of Deep Semantics and Edge Information in Multimodal MRI
+### Small Object Detection Method Based on Global Multi-level Perception and Dynamic Region Aggregation
 
 -----------
 
-The semantic segmentation part consists of the improved Swin Transformer, and the edge detection part consists of convolutional layers and ESAB modules.The fusion part uses the method of graph convolution to fuse semantic features and edge features.
+This method mainly consists of two modules: global multi-level perception module and dynamic region aggregation module. In the global multi-level perception module, self-attention is used to perceive the global region, and its linear transformation is mapped through a convolutional network to increase the local details of global perception, thereby obtaining more refined global information. The dynamic region aggregation module, devised with a sparse strategy in mind, selectively interacts with relevant features. This design allows aggregation of key features of individual instances, effectively mitigating noise interference. Consequently, this approach addresses the challenges associated with densely distributed targets and enhances the model’s ability to discriminate on a fine-grained level. This proposed method was evaluated on two popular datasets. 
 
 #### DataSets
 
 ----------
 
-The dataset used in this paper is BraTS2018，2019 and 2020. The datasets can be found in kaggle, using the training set part.
+The datasets used in this paper are TT-100K，NWPU VHR-10. The TT-100K can be found in https://cg.cs.tsinghua.edu.cn/traffic-sign/. NWPU VHR-10 can be found in https://github.com/lavish619/DeepLab_NWPU-VHR-10_Dataset_coco.
 
 #### Requirement
 
@@ -16,31 +16,28 @@ The dataset used in this paper is BraTS2018，2019 and 2020. The datasets can be
 
 This article is implemented by Pytorch.
 
-1. PyTorch 1.9.0
-2. Some other libraries
-
 #### Cite
 
 ----------------------------------------------
+Z. Zhu, R. Zheng, G. Qi, S. Li, Y. Li and X. Gao, "Small Object Detection Method Based on Global Multi-level Perception and Dynamic Region Aggregation," in IEEE Transactions on Circuits and Systems for Video Technology, doi: 10.1109/TCSVT.2024.3402097. 
 
-@article{*ZHU2023376*,
+----------------------------------------------
 
-title = {Brain tumor segmentation based on the fusion of deep semantics and edge information in multimodal MRI},
-
-journal = {Information Fusion},
-
-volume = {91},
-
-pages = {376-387},
-
-year = {2023},
-
-issn = {1566-2535},
-
-doi = {https://doi.org/10.1016/j.inffus.2022.10.022},
-
-url = {https://www.sciencedirect.com/science/article/pii/S1566253522001981},
-
-author = {Zhiqin Zhu and Xianyu He and Guanqiu Qi and Yuanyuan Li and Baisen Cong and Yu Liu},
-
-}
+@ARTICLE{10542220,
+  
+  author={Zhu, Zhiqin and Zheng, Renzhong and Qi, Guanqiu and Li, Shuang and Li, Yuanyuan and Gao, Xinbo},
+  
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  
+  title={Small Object Detection Method Based on Global Multi-level Perception and Dynamic Region Aggregation}, 
+  
+  year={2024},
+  
+  volume={},
+  
+  number={},
+  
+  pages={1-1},
+  
+  doi={10.1109/TCSVT.2024.3402097}
+  }
